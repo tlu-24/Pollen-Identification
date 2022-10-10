@@ -15,15 +15,10 @@ This code uses Python 3.7+. For more information on checking your python version
 - [os](https://docs.python.org/3/library/os.htmlcop)
 - [copy](https://docs.python.org/3/library/copy.html)
 
-Provided is the notebook for cropping data to augument the data. The notebook can be run as is
-and it will pop up a simple GUI that will allow you to crop the data you like, name the data,
-choose the location you want to save  it and if you like to normalized the output. Also provided
-is the notebook for transfer learning for retraining the network, the saved best model, the name
-of the classes in a textfile as well as thepredict function which allows you to use the model to
-predict your output.The predict model is in the last block of the transfer learning function and 
-takes in the class_name.txt, the model you want to use(you can use the provided pollen_model.txt) 
-and path to the image you want to predict.Inorder for the transfer learning to work you need to 
-set open a folder that contains a folder call train(where your training data is) and val(where 
-your training data is). Inside both the train and val folder you will need a folderfor each one 
-of your classes and inside those folders you will put the data you want to train the model or 
-vadilate the model on. You will need to load this folder into the dataloader.
+## Usage
+
+The croppying.ipynb should be ran frist which will allow for a simple GUI to appear that will allow for you to choose what images you want to be cropped. There will be the option to normalize your image, what folder you want to save the resulting photos at and the name you want them the photos to be. The resulting photos should be saved into a folder that will be the training data and a folder that will be that validation. The suggested split is 70 training 30 validation.
+
+The project.ipynb should be ran next which allow for you to preform transfer learning. The option to save your model is given at the end.
+
+pollen_model.pt is also provided which allows for you to use the resulting model created with data from pollen from around bernard field station.
